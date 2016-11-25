@@ -1,11 +1,10 @@
 h2= config.app
-p(translate-value-greeter="{{ ::from }}", translate=".CONTENT")
-p {{ '2015-10-21' | moment:'fromNow' }}
+p(
+  translate-value-greeter="{{ ::from }}",
+  translate=".CONTENT")
+p TROLOLO
 button.button(
   on-tap="homeController.showPopup()",
   translate=".BUTTON",
   type="button")
-language-picker(
-  on-change="homeController.onLanguageChange(locale)",
-  settings="statesData",
-  key="locale")
+a(ui-state="STATE_TWO") Go to Two
