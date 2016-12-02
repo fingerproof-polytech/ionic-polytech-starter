@@ -33,7 +33,7 @@
       "constants": {
         "I18N": {
           "LOCALES": ["en-US", "fr-FR"],
-          "DEFAULT": "en-US"
+          "DEFAULT": "fr-FR"
         }
       },
       "builds": {
