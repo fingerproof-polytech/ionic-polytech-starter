@@ -21,7 +21,7 @@
      * @return {String|null}
      */
     service.getImageUrl = function (path, width) {
-      return path && API_IMAGES_URL + 'w' + width + path;
+      return path && API_IMAGES_URL + '/t/p/w' + width + path;
     };
 
     /**
@@ -30,7 +30,7 @@
      * @return {Promise} Passing an array of results, may be empty.
      */
     service.searchMovies = function (query) {
-      return httpService.get('search/movie', {
+      return httpService.get('/3/search/movie', {
         language: i18nService.getLocale(),
         api_key: API_KEY,
         query: query
@@ -48,7 +48,7 @@
      * @return {Promise} Passing an object.
      */
     service.getMovie = function (id) {
-      return httpService.get('movie/' + id, {
+      return httpService.get('/3/movie/' + id, {
         language: i18nService.getLocale(),
         api_key: API_KEY
       }).then(function (movie) {
@@ -63,7 +63,7 @@
      * @return {Promise} Passing an object.
      */
     service.discoverMovie = function () {
-      return httpService.get('discover/movie', {
+      return httpService.get('/3/discover/movie', {
         // Limit results (max) to the next three months
         'release_date.lte': moment().add(3, 'months').format('YYYY-MM-DD'),
         // Limit results (min) to today

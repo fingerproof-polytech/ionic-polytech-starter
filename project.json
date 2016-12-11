@@ -27,15 +27,15 @@
       "builds": {
         "dev": {
           "constants": {
-            "API_SERVER_URL": "https://api.themoviedb.org/3/",
-            "API_IMAGES_URL": "https://image.tmdb.org/t/p/",
+            "API_SERVER_URL": "https://api.themoviedb.org",
+            "API_IMAGES_URL": "https://image.tmdb.org",
             "API_KEY": "TODO"
           }
         },
         "prod": {
           "constants": {
-            "API_SERVER_URL": "https://api.themoviedb.org/3/",
-            "API_IMAGES_URL": "https://image.tmdb.org/t/p/",
+            "API_SERVER_URL": "https://api.themoviedb.org",
+            "API_IMAGES_URL": "https://image.tmdb.org",
             "API_KEY": "TODO"
           }
         }
