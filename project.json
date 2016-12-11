@@ -7,18 +7,6 @@
       "excludePlugins": [],
       "constants": {}
     },
-    "test": {
-      "excludePlugins": [],
-      "constants": {}
-    },
-    "preprod": {
-      "excludePlugins": [],
-      "constants": {}
-    },
-    "qa": {
-      "excludePlugins": [],
-      "constants": {}
-    },
     "prod": {
       "excludePlugins": [
         "cordova-plugin-console"
@@ -39,27 +27,16 @@
       "builds": {
         "dev": {
           "constants": {
-            "API_SERVER_URL": ""
-          }
-        },
-        "test": {
-          "constants": {
-            "API_SERVER_URL": ""
-          }
-        },
-        "preprod": {
-          "constants": {
-            "API_SERVER_URL": ""
-          }
-        },
-        "qa": {
-          "constants": {
-            "API_SERVER_URL": ""
+            "API_SERVER_URL": "https://api.themoviedb.org/3/",
+            "API_IMAGES_URL": "https://image.tmdb.org/t/p/",
+            "API_KEY": "TODO"
           }
         },
         "prod": {
           "constants": {
-            "API_SERVER_URL": ""
+            "API_SERVER_URL": "https://api.themoviedb.org/3/",
+            "API_IMAGES_URL": "https://image.tmdb.org/t/p/",
+            "API_KEY": "TODO"
           }
         }
       }

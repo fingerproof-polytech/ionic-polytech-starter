@@ -19,11 +19,15 @@
     controller.search = function () {
       // Use `statesService.search` which makes an asynchronous
       // call to the TMDB API and returns a promise...
-      statesService.search($scope.search.query).then(function (results) {
+      statesService.searchMovies($scope.search.query).then(function (results) {
         // Then, if the call was successful, update `$scope.search.results`.
         $scope.search.results = results;
       });
     };
+
+    statesService.discoverMovie().then(function (movie) {
+      console.log(movie.title);
+    });
   }
 
   module.controller('homeController', [
