@@ -16,8 +16,8 @@
   },
   "apps": {
     "default": {
-      "name": "App",
-      "id": "id.goes.here",
+      "name": "TMDB App",
+      "id": "pro.fing.polytech2016.tmdb",
       "constants": {
         "I18N": {
           "LOCALES": ["en-US", "fr-FR"],

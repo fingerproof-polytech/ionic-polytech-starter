@@ -6,7 +6,7 @@ ion-view.view-home(view-title="Accueil")
         placeholder="Rechercher",
         ng-model="search.query",
         type="search")
-    button.button.button-clear.button-royal(
+    button.button.button-clear.button-assertive(
       ng-disabled="search.query.length < 3",
       on-tap="homeController.search()",
       type="button")
