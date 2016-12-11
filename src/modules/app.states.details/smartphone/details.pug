@@ -1,0 +1,16 @@
+ion-view.view-details(view-title="{{ movieData.title }}")
+  ion-content
+    img.full-image(
+      ng-src="{{ movieData.poster }}",
+      ng-if="movieData.poster",
+      alt="Poster")
+    ul.padding
+      li {{ movieData.vote_average }}/10, {{ movieData.vote_count }} votes
+      li Date de sortie : {{ movieData.release_date | moment:'LL' }}
+      li Budget : {{ movieData.budget | currency:'$':0 }}
+      li Gains : {{ movieData.revenue | currency:'$':0 }}
+    img.full-image(
+      ng-src="{{ movieData.backdrop }}",
+      ng-if="movieData.backdrop",
+      alt="Illustration")
+    p.padding {{ movieData.overview }}

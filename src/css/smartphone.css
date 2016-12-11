@@ -8,3 +8,7 @@
 .loading-active .popup-container {
   display: none !important
 }
+
+.full-image {
+  display: block;
+}
