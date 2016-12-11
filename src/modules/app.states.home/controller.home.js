@@ -4,7 +4,12 @@
 (function (module) {
   'use strict';
 
-  function HomeController($scope, statesService) {
+  function HomeController(
+    $scope,
+    statesService,
+    shakeService,
+    popupService
+  ) {
     var controller = this;
 
     /**
@@ -25,14 +30,34 @@
       });
     };
 
-    statesService.discoverMovie().then(function (movie) {
-      console.log(movie.title);
+    /**
+     * Show a popup for a random movie if none already open.
+     */
+    controller.discoverMovie = function () {
+      if (popupService.isOpen()) { return; }
+      statesService.discoverMovie().then(function (movie) {
+        popupService.open(module, 'smartphone/popup.discover', movie);
+      });
+    };
+
+    // When the view has been entered...
+    $scope.$on('$ionicView.enter', function () {
+      // Listen to device shakes which will call `controller.discoverMovie`.
+      shakeService.listen(controller.discoverMovie);
+    });
+
+    // When the view has is being left...
+    $scope.$on('$ionicView.leave', function () {
+      // Stop listening to device shakes.
+      shakeService.stopListening();
     });
   }
 
   module.controller('homeController', [
     '$scope',
     'statesService',
+    'shakeService',
+    'popupService',
     HomeController
   ]);
 
