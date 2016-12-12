@@ -7,18 +7,6 @@
       "excludePlugins": [],
       "constants": {}
     },
-    "test": {
-      "excludePlugins": [],
-      "constants": {}
-    },
-    "preprod": {
-      "excludePlugins": [],
-      "constants": {}
-    },
-    "qa": {
-      "excludePlugins": [],
-      "constants": {}
-    },
     "prod": {
       "excludePlugins": [
         "cordova-plugin-console"
@@ -28,18 +16,20 @@
   },
   "apps": {
     "default": {
-      "name": "App",
-      "id": "id.goes.here",
+      "name": "tmdb.app",
+      "id": "pro.fing.polytech2016.tmdb",
       "constants": {
         "I18N": {
           "LOCALES": ["en-US", "fr-FR"],
-          "DEFAULT": "en-US"
+          "DEFAULT": "fr-FR"
         }
       },
       "builds": {
         "dev": {
           "constants": {
-            "API_SERVER_URL": ""
+            "API_SERVER_URL": "https://api.themoviedb.org"
+            "API_IMAGE_URL": "https://image.tmdb.org"
+            "API_KEY": "$API_KEY"
           }
         },
         "test": {
