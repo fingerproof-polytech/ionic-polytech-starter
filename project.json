@@ -17,7 +17,7 @@
   "apps": {
     "default": {
       "name": "tmdb.app",
-      "id": "pro.fing.polytech2016.tmdb",
+      "id": "beul.rene.polytech2016.tmdb",
       "constants": {
         "I18N": {
           "LOCALES": ["en-US", "fr-FR"],
@@ -27,29 +27,16 @@
       "builds": {
         "dev": {
           "constants": {
-            "API_SERVER_URL": "https://api.themoviedb.org"
-            "API_IMAGE_URL": "https://image.tmdb.org"
+            "API_SERVER_URL": "https://api.themoviedb.org",
+            "API_IMAGE_URL": "https://image.tmdb.org",
             "API_KEY": "$API_KEY"
-          }
-        },
-        "test": {
-          "constants": {
-            "API_SERVER_URL": ""
-          }
-        },
-        "preprod": {
-          "constants": {
-            "API_SERVER_URL": ""
-          }
-        },
-        "qa": {
-          "constants": {
-            "API_SERVER_URL": ""
           }
         },
         "prod": {
           "constants": {
-            "API_SERVER_URL": ""
+            "API_SERVER_URL": "https://api.themoviedb.org",
+            "API_IMAGE_URL": "https://image.tmdb.org",
+            "API_KEY": "$API_KEY"
           }
         }
       }
